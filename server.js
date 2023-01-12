@@ -7,8 +7,10 @@ const app = express();
 
 const dbconfig = require('./db')
 
+// Middlewear
 app.use(express.json())
-
+app.use(bodyparser.json())
+app.use(express.urlencoded({ extended: false }))
 
 const port = process.env.PORT || 5000;
 
